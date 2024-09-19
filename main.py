@@ -43,7 +43,18 @@ def preProcesator():
 
         plainText = removeExtras(file)
 
-        print(plainText)
+        # Create the new file.
+
+        newFileName = "out.txt"
+
+        newFile = open(newFileName, "w")
+
+        for line in plainText:
+
+            newFile.write(line)
+
+        return newFileName
+
 
     except:
 
@@ -51,9 +62,29 @@ def preProcesator():
 
 # Print each char in the text file.
 
+def readFile(fileName):
+
+    try:
+
+        file = open(fileName, "r")
+
+        print("Print each character.")
+
+        for line in file:
+
+            for char in line:
+
+                print(char)
+
+    except:
+
+        print("Unexisted data!")
+
 
 # Main function.
 
 if __name__ == "__main__":
 
-    preProcesator()
+    fileName = preProcesator()
+
+    readFile(fileName)
