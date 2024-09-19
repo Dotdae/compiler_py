@@ -1,0 +1,11 @@
+import "express" from "express";
+
+const app = express();
+
+// Run the server.
+
+function runServer(){
+
+    console.log("Server running"); // Show the message in console.
+
+}
