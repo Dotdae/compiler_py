@@ -8,4 +8,8 @@ function runServer(){
 
     console.log("Server running"); // Show the message in console.
 
+    // Un comentario.
+
+    mostrar('Este es otro mensaje') // Otro comentario.
+
 }

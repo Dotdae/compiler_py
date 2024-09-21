@@ -1,1 +1,11 @@
-import "express" from "express";const app = express();function runServer(){console.log("Server running"); // Show the message in console.}
+import "express" from "express";
+
+const app = express();
+
+
+function runServer(){
+
+    console.log("Server running"); 
+    
+    mostrar('Este es otro mensaje') 
+}

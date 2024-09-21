@@ -3,35 +3,6 @@ from LinkedList import LinkedList
 
 palabrasReservadas = ["funct", "var", "ent", "cad", "flot", "bool", "verdadero", "falso", "const", "si", "o", "entonces", "para", "en rango", "mostrar", "escribir"]
 
-
-# Clean code.
-
-def removeExtras(file):
-
-    # Delete end of line.
-
-    splitText = file.split("\n\n")
-
-    cleanText = []
-
-    # Delete spaces.
-
-    for line in splitText:
-
-        cleanText.append(line.strip())
-
-    # Delete comments.
-
-    for line in cleanText:
-
-        # Search and select the comment and remove it.
-
-        if(re.search("^//", line)):
-
-            cleanText.remove(line)
-
-    return cleanText
-
 def preProcesator():
 
     # Validate if the archive exist.
@@ -39,12 +10,14 @@ def preProcesator():
     try:
 
         file = open("example.txt", "r")
-
-        file = str(file.read())
+        noComment = ''
 
         # Delete comments.
 
-        plainText = removeExtras(file)
+        for line in file:
+
+            noComment = noComment + line.split('//')[0]
+
 
         # Create the new file.
 
@@ -52,12 +25,11 @@ def preProcesator():
 
         newFile = open(newFileName, "w")
 
-        for line in plainText:
+        # Delete white spaces.
 
-            newFile.write(line)
+        newFile.write(noComment.rstrip() + '\n')
 
         return newFileName
-
 
     except:
 
