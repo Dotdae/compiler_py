@@ -88,14 +88,9 @@ def readFile(fileName):
 
 if __name__ == "__main__":
 
-    #fileName = preProcesator()
+    fileName = preProcesator()
 
-    #readFile(fileName)
+    readFile(fileName)
     
     lista = LinkedList()
-
-    lista.add(1)
-    lista.add(2)
-    lista.add(3)
-
-    lista.print()
+    
