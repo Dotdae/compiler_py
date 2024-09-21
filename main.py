@@ -1,5 +1,7 @@
 import re
 
+palabrasReservadas = ["funct", "var", "ent", "cad", "flot", "bool", "verdadero", "falso", "const", "si", "o", "entonces", "para", "en rango", "mostrar", "escribir"]
+
 
 # Clean code.
 
