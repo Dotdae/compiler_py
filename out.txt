@@ -1,11 +1,11 @@
-import "express" from "express";
-
 const app = express();
 
 
-function runServer(){
+funct runServer(){
 
-    console.log("Server running"); 
+    mostrar("Server running"); 
     
     mostrar('Este es otro mensaje') 
+    var cadena: cad = "Texto"
+
 }
