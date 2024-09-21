@@ -67,6 +67,14 @@ def tokenizeCode(fileName):
     return tokens
 
 
+def isReservedWord(tokens):
+    
+    for token in tokens:
+
+        if token in palabrasReservadas:
+
+            print(f'{token} is a reserved word!')
+
 def preProcesator():
 
     # Validate if the archive exist.
@@ -133,6 +141,8 @@ if __name__ == "__main__":
     for token in tokens:
 
         print(f"Token -> {token}")
+    
+    isReservedWord(tokens)
 
 
     #readFile(fileName)
