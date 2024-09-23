@@ -136,13 +136,19 @@ if __name__ == "__main__":
 
     tokens = tokenizeCode(fileName)
 
-    print('Token list')
+
+    # Insert tokens in linked list.
+
+    linkedList = LinkedList()
 
     for token in tokens:
 
-        print(f"Token -> {token}")
+        linkedList.add(token)
     
-    isReservedWord(tokens)
+    print('Token list')
+
+    linkedList.print()
+
 
 
     #readFile(fileName)
