@@ -1,15 +1,15 @@
-const app = express();
+const app := express()
 
 // Run the server.
 
 funct runServer(){
 
-    mostrar("Server running"); // Show the message in console.
+    mostrar("Server running") // Show the message in console.
 
     // Un comentario.
 
-    mostrar('Este es otro mensaje') // Otro comentario.
+    mostrar("Este es otro mensaje") // Otro comentario.
 
-    var cadena: cad = "Texto"
+    var cadena: cad := "Texto"
 
 }
