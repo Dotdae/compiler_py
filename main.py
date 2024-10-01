@@ -48,15 +48,14 @@ def tokenizeCode(fileName):
 
             continue
         
-        '''
-            Extraemos el token usando expresiones regulares.
-            \b es el limite para buscar una palabra que contenga caracterés alfanuméricos antes o después.
-            \w+ es para buscar caracteres de (A-Z)(a-z)(0-9)(_) y el + es para uno o más.
-            | es el operador OR.
-            \S es para buscar cada caracter que no sea un espacio en blanco ( )(\t)(\n)
-            Esta expresión regular busca palabras completas y caracteres individuales como = () ; apoyandose de \S
-            El segundo parámetro es para tomar una subcadena desde el índice i hasta el fin de la cadena. 
-        '''
+        # Extraemos el token usando expresiones regulares.
+        # \b es el limite para buscar una palabra que contenga caracterés alfanuméricos antes o después.
+        # \w+ es para buscar caracteres de (A-Z)(a-z)(0-9)(_) y el + es para uno o más.
+        # | es el operador OR.
+        # \S es para buscar cada caracter que no sea un espacio en blanco ( )(\t)(\n)
+        # Esta expresión regular busca palabras completas y caracteres individuales como = () ; apoyandose de \S
+        # El segundo parámetro es para tomar una subcadena desde el índice i hasta el fin de la cadena. 
+
         # Manejar el operador := 
 
         if source[i:i+2] == ':=':
@@ -427,8 +426,6 @@ if __name__ == "__main__":
         # Almacena lexema, valor, columna, renglón, tipo de token
 
         linkedList.add(token[0], token[0], token[2], token[1], tipo_token)
-
-    print('Token list:')
 
     # Imprime la tabla de tokens.
 
